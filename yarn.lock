@@ -2086,11 +2086,6 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lib@^4.3.3:
-  version "4.3.3"
-  resolved "https://registry.yarnpkg.com/lib/-/lib-4.3.3.tgz#a92c85b27610e1f1361cc54110a3653abce35b5f"
-  integrity sha512-5ZIjwJvbfVJjbu0BTpfkqJrQ2ykXzo+XRFkHkTPHGpAPNS9vWwhLn1caQsedTKXmQ2U9gKYFSAlfjAXdXuWBjA==
-
 lilconfig@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.4.tgz#f4507d043d7058b380b6a8f5cb7bcd4b34cee082"
@@ -3227,11 +3222,6 @@ timers-browserify@2.0.12:
   integrity sha512-9phl76Cqm6FhSX9Xe1ZUAMLtm1BLkKj2Qd5ApyWkXzsMRaA7dgr81kf4wJmQf/hAvg8EEyJxDo3du/0KlhPiKQ==
   dependencies:
     setimmediate "^1.0.4"
-
-tiny-json-http@^7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/tiny-json-http/-/tiny-json-http-7.3.1.tgz#4a3ea5c15194a6d3a00ff8ce0d0eb0e880a4aeaf"
-  integrity sha512-sgt6ABJnNftz8itxjVwyrKZsk+Dy62uXPR/ryeQ8wxC3sB6UCaz+3mrzKbZdu5DoyzEa/bpHMVkqsTCvuPaDNg==
 
 to-fast-properties@^2.0.0:
   version "2.0.0"
