@@ -23,8 +23,16 @@ export default function ListPages({ pages}) {
                  
                     <img className="w-16 h-16 rounded-full lg:w-20 lg:h-20" src={item.backgroundImage.responsiveImage.src} alt="" />
                     <div className="font-medium text-lg leading-6 space-y-1">
-                      <h3>{item.title}</h3>
-                      <p className="text-orange-600">{item.location}</p>
+                      <h3 className="text-orange-600 hover:text-black">
+
+                      <Link href={item.permalink}>
+                      
+                      <a>{item.title}</a>
+                      </Link>
+                    
+                      
+                      </h3>
+                      <p>{item.location}</p>
                     </div>
                   </div>
 

@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { PlusSmIcon } from '@heroicons/react/solid'
+import Link from "next/link";
 
 const user = {
   name: 'Tom Cook',
@@ -11,7 +12,7 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
+  { name: 'Home', href: '/', current: true },
 
 ]
 const userNavigation = [
@@ -56,10 +57,9 @@ export default function Navbar() {
                 </div>
                 <div className="hidden md:ml-6 md:flex md:items-center md:space-x-4">
                   {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
+
+                    <Link key={item.name} href={item.href}>
+                    <a className={classNames(
                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                         'px-3 py-2 rounded-md text-sm font-medium'
                       )}
@@ -67,6 +67,8 @@ export default function Navbar() {
                     >
                       {item.name}
                     </a>
+                    </Link>
+                    
                   ))}
                 </div>
               </div>
