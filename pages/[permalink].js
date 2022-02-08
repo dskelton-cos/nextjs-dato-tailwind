@@ -32,7 +32,11 @@ export default function Page({ preview, page, morePages }) {
 
   return (
     <>
-      <PageHeader title={page.title} intro={page.strapLine} coverImage={page.backgroundImage.responsiveImage} />
+      <PageHeader 
+      title={page.title} 
+      intro={page.strapLine} 
+      coverImage={page.backgroundImage.responsiveImage} />
+
       {morePages.length > 0 && <ListPages pages={morePages} />}
     </>
      
