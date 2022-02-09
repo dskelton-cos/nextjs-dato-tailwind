@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css'
 import { getPageAndMorePages } from '../lib/dato'
 
 import ListPages from '../components/ListPages-with-image';
-import PageHeader from '../components/PageHeader';
+import Hero from '../components/Hero';
 
 // This function gets called at build time
 export async function getStaticProps({ preview = false }) {
@@ -16,9 +16,9 @@ export async function getStaticProps({ preview = false }) {
     props: {
       preview,
       page: {
-        ...data ?.page
+        ...data?.page
         },
-      morePages: data ?.morePages ?? [],
+      morePages: data?.morePages ?? [],
     },
   };
 }
@@ -34,10 +34,11 @@ export default function Index({ preview, morePages, page }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PageHeader
+      <Hero
         title={page.title}
         intro={page.strapLine}
         coverImage={page.backgroundImage.responsiveImage}
+        slug={page.permalink}
       />
 
       <ListPages pages={morePages} />

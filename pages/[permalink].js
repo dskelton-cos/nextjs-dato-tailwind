@@ -1,6 +1,7 @@
 import { getAllPagesWithSlug , getPageAndMorePages  } from '../lib/dato'
 import ListPages from '../components/ListPages-with-image';
-import PageHeader from '../components/PageHeader';
+import Hero from '../components/Hero';
+import Feature from '../components/Feature';
 
 //If a page has Dynamic Routes and uses getStaticProps, it needs to define a list of paths to be statically generated.
 export async function getStaticPaths() {
@@ -32,10 +33,12 @@ export default function Page({ preview, page, morePages }) {
 
   return (
     <>
-      <PageHeader 
+      <Hero 
       title={page.title} 
       intro={page.strapLine} 
       coverImage={page.backgroundImage.responsiveImage} />
+
+      <Feature />
 
       {morePages.length > 0 && <ListPages pages={morePages} />}
     </>
