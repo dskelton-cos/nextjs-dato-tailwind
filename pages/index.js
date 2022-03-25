@@ -7,21 +7,6 @@ import { getPageAndMorePages } from '../lib/dato'
 import ListPages from '../components/ListPages-with-image';
 import Hero from '../components/Hero';
 
-// This function gets called at build time
-export async function getStaticProps({ preview = false }) {
-
-  const data = await getPageAndMorePages('index', preview) || []
-  // By returning { props: { page } }, the Blog component will receive `page` as a prop at build time
-  return {
-    props: {
-      preview,
-      page: {
-        ...data?.page
-        },
-      morePages: data?.morePages ?? [],
-    },
-  };
-}
 
 export default function Index({ preview, morePages, page }) {
 
@@ -46,4 +31,20 @@ export default function Index({ preview, morePages, page }) {
     </>
 
   )
+}
+
+// This function gets called at build time
+export async function getStaticProps({ preview = false }) {
+
+  const data = await getPageAndMorePages('index', preview) || []
+
+  return {
+    props: {
+      preview,
+      morePages: data?.morePages ?? [],
+      page: {
+        ...data?.page
+        },
+    },
+  };
 }
