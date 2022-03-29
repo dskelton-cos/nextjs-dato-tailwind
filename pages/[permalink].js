@@ -15,7 +15,7 @@ export default function Page({ preview, page, morePages }) {
       
       <PageContent content={page.content} />
       
-      <Feature />
+      <Feature content={page.modularContent} />
       
       {morePages.length > 0 && <ListPages pages={morePages} />}
     </>

@@ -40,7 +40,9 @@ const communicationFeatures = [
   },
 ]
 
-export default function Feature() {
+export default function Feature({content}) {
+
+  console.log(content);
   return (
     <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
       <div className="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-7xl">
@@ -52,26 +54,18 @@ export default function Feature() {
             </h3>
 
             <dl className="mt-10 space-y-10">
-              {transferFeatures.map((item) => (
+              {content.map((item) => (
                 <div key={item.id} className="relative">
                   <dt>
-                    <p className="text-2xl font-medium text-gray-900">{item.name}</p>
+                    <p className="text-2xl font-medium text-gray-900">{item.heading}</p>
                   </dt>
-                  <dd className="mt-2 text-base text-gray-700">{item.description}</dd>
+                  <dd className="mt-2 text-base text-gray-700" dangerouslySetInnerHTML={{ __html: item.content }}></dd>
                 </div>
               ))}
             </dl>
           </div>
 
-          <div className="mt-10 -mx-4 relative lg:mt-0" aria-hidden="true">
-
-            <img
-              className="relative mx-auto"
-              width={490}
-              src="https://tailwindui.com/img/features/feature-example-1.png"
-              alt=""
-            />
-          </div>
+          
         </div>
       </div>
     </div>
